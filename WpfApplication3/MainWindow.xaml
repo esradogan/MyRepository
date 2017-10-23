@@ -1,0 +1,21 @@
+﻿<Window x:Name="Kaydet1" x:Class="WpfApplication3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid x:Name="Kaydet" Margin="-41,-21,41,21">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="430*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="26" Margin="234,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1" Text="esra" Grid.Column="1"/>
+        <TextBox x:Name="tb2" HorizontalAlignment="Left" Height="23" Margin="234,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="Doğan" TextChanged="TextBox_TextChanged_2" Grid.Column="1"/>
+        <Button x:Name="btn" Content="Kaydet" HorizontalAlignment="Left" Margin="253,123,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1"/>
+        <Label Content="Adınız:" HorizontalAlignment="Left" Margin="154,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.622,2.577" Grid.Column="1"/>
+        <Label Content="Soyadınız:" HorizontalAlignment="Left" Margin="154,76,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <ListBox x:Name="list" HorizontalAlignment="Left" Height="265" Margin="70,45,0,0" VerticalAlignment="Top" Width="166" Grid.ColumnSpan="2" SelectionChanged="ListBox_SelectionChanged_1"/>
+        <Label Content="Liste" Grid.Column="1" HorizontalAlignment="Left" Margin="39,19,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Ad_Soyad_Kaydet" Content="Ad Soyad Kaydet" Grid.Column="1" HorizontalAlignment="Left" Margin="234,169,0,0" VerticalAlignment="Top" Width="120" Click="Ad_Soyad_Kaydet_Click"/>
+        <Button x:Name="btn2" Content="Sil" Grid.Column="1" HorizontalAlignment="Left" Margin="253,218,0,0" VerticalAlignment="Top" Width="75" Click="btn2_Click"/>
+
+    </Grid>
+</Window>
