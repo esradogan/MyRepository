@@ -40,6 +40,31 @@ namespace WpfApplication3
             string path1 = @"C:\Users\LENOVO\Desktop\Adsoyad.txt";
             FileStream fs2 = new FileStream(path1, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader reading = new StreamReader(fs2, System.Text.Encoding.UTF8);
+
+
+            fs2.Position = 3;
+            char character = ' ';
+            string word = " ";
+            int count1 = 0;
+            int count2 = 100;
+            for (int i = 1; i < reading.Read(); i++)
+            {
+                
+                for (int j = count1; j < count2; j++)
+                {
+                    character =  (char) reading.Read();
+                      word = word + character;
+              
+                }
+
+                count1 += 100;
+                count2 += 100;
+               
+            }list.Items.Add(word);
+
+            reading.Close();
+            fs2.Close();
+
             //string satir = "";
 
             //string[] x;
@@ -67,14 +92,16 @@ namespace WpfApplication3
 
             //fs2.Close();
 
-            string writing = reading.ReadLine();
-            do
-            {
 
-                list.Items.Add(writing);
 
-            } while (!reading.EndOfStream);
-            fs2.Close();
+            //string writing = reading.ReadLine();
+            //do
+            //{
+
+            //    list.Items.Add(writing);
+
+            //} while (!reading.EndOfStream);
+            //fs2.Close();
 
 
 
