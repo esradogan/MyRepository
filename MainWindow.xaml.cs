@@ -42,25 +42,36 @@ namespace WpfApplication3
             StreamReader reading = new StreamReader(fs2, System.Text.Encoding.UTF8);
 
 
-            fs2.Position = 3;
+            fs2.Position = 2;
             char character = ' ';
-            string word = " ";
-            int count1 = 0;
+            string word = "";
+            int count1 ;
             int count2 = 100;
             for (int i = 1; i < reading.Read(); i++)
             {
-                
-                for (int j = count1; j < count2; j++)
+                for ( count1 = 1; count1 < fs2.Length; count1++)
                 {
-                    character =  (char) reading.Read();
-                      word = word + character;
-              
+                    
+                
+                character = (char)reading.Read();
+
+                if (count1 % 100 == 0)
+                {
+                    word = (word + character + "\n");
                 }
 
-                count1 += 100;
-                count2 += 100;
+                else word = word + character;
+                } list.Items.Add(word);
+                //for (int j = count1; j <= count2; j++)
+                //{
+                //    character =  (char) reading.Read();
+                //      word = word + character;
+              
+                //}
+  //count1 += 100;
+  //              count2 += 100;
                
-            }list.Items.Add(word);
+            }
 
             reading.Close();
             fs2.Close();
